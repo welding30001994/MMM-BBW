@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>MENSAJES-BBW</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subir Fotos y Publicar Mensajes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff0f6;
+            color: #800080;
+            text-align: center;
+        }
+        header {
+            background-color: #ff66b2;
+            padding: 15px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .header-img {
+            width: 100px;
+            height: 100px;
+            margin-right: 15px;
+            border-radius: 50%;
+        }
+        nav {
+            background-color: #ff66b2;
+            padding: 10px;
+            margin: 10px auto;
+            border-radius: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        nav a:hover {
+            background: #d14791;
+        }
+        .container {
+            padding: 20px;
+        }
+        main {
+            max-width: 500px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 2px solid #ff66b2;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #ff66b2;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .post {
+            background: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://raw.githubusercontent.com/welding30001994/ti/refs/heads/main/WhatsApp%20Image%202025-02-25%20at%2018.06.19.jpeg" alt="Logo" class="header-img">
+        <h1>FANTASIAS BBW</h1>
+    </header>
+    <nav>
+        <a href="#">Inicio</a> 
+        <a href="#">Galería</a> 
+        <a href="#">Contacto</a>
+    </nav>
+    <div class="container">
+        <main>
+            <h2>Publica un Mensaje</h2>
+            <textarea id="message" placeholder="Escribe tu mensaje..."></textarea>
+            <button onclick="publishMessage()">Publicar</button>
+            <div id="messageBoard"></div>
+        </main>
+    </div>
+    <footer>
+        <p>&copy; 2025 Subir Fotos y Mensajes. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        function publishMessage() {
+            let messageText = document.getElementById('message').value;
+            if (messageText.trim() !== "") {
+                let messageBoard = document.getElementById('messageBoard');
+                let post = document.createElement('div');
+                post.classList.add('post');
+                post.textContent = messageText;
+                messageBoard.prepend(post);
+                document.getElementById('message').value = "";
+            }
+        }
+    </script>
+</body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>
